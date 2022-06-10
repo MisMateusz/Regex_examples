@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tutuł</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="javaScript/Form.js"></script>
+</head>
+<body class="bg-gray-700">
+    <div>
+        <form action="*">
+            <div class="m-2 p-2 w-fit bg-indigo-500 rounded-xl">
+                <input id="comp" class="p-1 rounded-md" type="text" name="company" placeholder="Company"/>
+            </div>
+
+            <div id="fNameBorder" class="m-2 p-2 w-fit bg-indigo-500 rounded-xl">
+                <input id="fName" class="p-1 rounded-md" type="text" name="firstN" placeholder="First Name"/>
+            </div>
+            <p id="fNameCase1" class="hidden">Imie nie zaczyna się z dużej litery<br></p>
+            <p id="fNameCase2" class="hidden">Imie nie może zawierać cyfry, ani specjalnych znaków<br></p>
+            <p id="fNameInvalid" class="hidden">Nie poprawne Imie</p>
+
+            <div id="lNameBorder" class="m-2 p-2 w-fit bg-indigo-500 rounded-xl">
+                <input id="lName" class="p-1 rounded-md" type="text" name="lastN" placeholder="Last Name" />
+            </div>
+            <p id="lNameCase1" class="hidden">Imie nie zaczyna się z dużej litery<br></p>
+            <p id="lNameCase2" class="hidden">Imie nie może zawierać cyfry, ani specjalnych znaków<br></p>
+            <p id="lNameInvalid" class="hidden">Nie poprawne Imie</p>
+
+
+            <div id="MailBorder" class="m-2 p-2 w-fit bg-indigo-500 rounded-xl">
+                <input id="mail" class="p-1 rounded-md" type="text" name="email" placeholder="*Email"/>
+            </div>
+            <p id="mailCase1" class="hidden">Mail nie posiada "@" <br></p>
+            <p id="mailCase2" class="hidden">mail nie posiada odpowiedniej końcówki <i>np: (.com)</i><br></p>
+            <p id="mailInvalid" class="hidden">Nie poprawny e-mail</p>
+
+            <div class="m-2 p-2 w-fit bg-indigo-500 rounded-xl">
+                <label class="mx-2">Sector</label><select name="sector" class="p-1 rounded-md">
+                    <option value="Menaging">Menaging</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="IT">IT</option>
+                    <option value="Graphic">Graphic</option>
+                </select>
+            </div>
+
+            <div class="m-2 p-2 w-fit bg-indigo-500 rounded-xl"> 
+                <input  class="p-1 rounded-md" type="text" name="dietary" placeholder="Dietary requirements"/>
+            </div>
+
+            <div class="m-2 p-2 w-fit bg-indigo-500 rounded-xl">
+                <label class="mx-3">Parking required</label> <input type="checkbox" name="parking" />
+            </div>
+        </form>
+        <button class="p-1 mx-12 bg-white rounded-lg border-2 border-gray-200" onclick="validation()">Wyślij!</button>
+    </div>
+</body>
+</html>
